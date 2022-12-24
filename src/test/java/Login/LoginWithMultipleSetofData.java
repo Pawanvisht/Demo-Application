@@ -20,6 +20,7 @@ public class LoginWithMultipleSetofData {
 		
 		WebDriverManager.chromedriver().setup();
 		driver =new ChromeDriver();
+		driver.manage().window().maximize();
 		
 		driver.get("https://sakshingp.github.io/assignment/login.html");
 		
@@ -104,6 +105,7 @@ public class LoginWithMultipleSetofData {
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
 		
 		driver.get("https://sakshingp.github.io/assignment/login.html");
 		

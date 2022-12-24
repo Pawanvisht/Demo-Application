@@ -94,7 +94,7 @@ public class Check_Table_Is_Shorted {
 	
 
 	
-	@Test(dependsOnMethods= {"verifyLogin","sorted_Amount"})
+	@Test(dependsOnMethods= {"verifyLogin","sorted_Amount","sorted_Description"})
 	public void closeWindow(){
 		driver.quit();
 		

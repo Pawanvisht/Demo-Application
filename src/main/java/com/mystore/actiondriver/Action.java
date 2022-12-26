@@ -32,7 +32,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.mystore.base.BaseClass;
 
 /**
- * @author Hitendra Verma added on 13th March2019
+ * @author Pawan Visht added on 13th november 2022
  *
  */
 public class Action extends BaseClass  {

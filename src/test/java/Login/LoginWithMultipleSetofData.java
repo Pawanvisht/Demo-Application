@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginWithMultipleSetofData {
 	
-	static WebDriver driver;
+	public WebDriver driver;
 	
 	@Test(dataProvider ="credentials")
 	public void verifyLoginCredentials(String senerio, String user_name, String password) throws InterruptedException{
@@ -83,7 +84,7 @@ public class LoginWithMultipleSetofData {
 			
 			}
 		  		
-			driver.quit();
+
 				
 	}
 	
@@ -104,7 +105,7 @@ public class LoginWithMultipleSetofData {
 	public void verifyLoginWithEnterKey() throws InterruptedException{
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver =new ChromeDriver();
+		driver =new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("https://sakshingp.github.io/assignment/login.html");
@@ -114,10 +115,15 @@ public class LoginWithMultipleSetofData {
 		login.sendKeys("password");
 		login.sendKeys(Keys.ENTER);
 		System.out.println("Login By Enter Key");
-		driver.quit();
+
 		
 }
+	@AfterMethod
+	public void closeWindow(){
+		driver.quit();
+		
 	
+	}
 	
 	
 	
